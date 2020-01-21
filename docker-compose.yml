@@ -20,6 +20,7 @@ services:
     restart: always                 # 重启方式
     ports:                          # 映射端口
       - "80:80"
+    command: apk add libltdl
     volumes:                        # 挂载数据卷
       - /etc/localtime:/etc/localtime
       - /root/docker-compose/web3/nginx/conf.d:/etc/nginx/conf.d
