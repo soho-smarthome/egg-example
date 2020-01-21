@@ -12,5 +12,6 @@ docker-compose up -d;
 # 查看日志
 docker logs nodejs;
 # 对空间进行自动清理
-docker system prune -a -f
+# 该命令慎用，会清除宿主机上的所有镜像
+#docker system prune -a -f
 
