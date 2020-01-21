@@ -20,12 +20,12 @@ services:
     restart: always                 # 重启方式
     ports:                          # 映射端口
       - "80:80"
-    #command: apk add libltdl
+    command: apk add libltdl
     volumes:                        # 挂载数据卷
       - /etc/localtime:/etc/localtime
       - /root/docker-compose/web3/nginx/conf.d:/etc/nginx/conf.d
       - /root/docker-compose/web3/nginx/logs:/var/log/nginx
-      - /usr/lib/x86_64-linux-gnu/libltdl.so.7:/usr/lib/libltdl.so.7
+    # - /usr/lib/x86_64-linux-gnu/libltdl.so.7:/usr/lib/libltdl.so.7
     depends_on:                     # 启动顺序
       - nodejs
     networks:                       # 加入指定网络
